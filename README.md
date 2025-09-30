@@ -2,6 +2,7 @@
 
 ## Reference Structure
 
+```
 codelyzer/
 │
 ├── backend/ # Python orchestrator & API
@@ -34,3 +35,4 @@ codelyzer/
 │
 ├── README.md
 └── .gitignore
+```
