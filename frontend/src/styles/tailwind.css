@@ -1,0 +1,176 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500&display=swap');
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Core System Colors */
+    --color-background: #fafafa; /* gray-50 */
+    --color-foreground: #111827; /* gray-900 */
+    --color-border: #e5e7eb; /* gray-200 */
+    --color-input: #ffffff; /* white */
+    --color-ring: #2563eb; /* blue-600 */
+    
+    /* Surface Colors */
+    --color-card: #ffffff; /* white */
+    --color-card-foreground: #111827; /* gray-900 */
+    --color-popover: #ffffff; /* white */
+    --color-popover-foreground: #111827; /* gray-900 */
+    
+    /* Muted Colors */
+    --color-muted: #f3f4f6; /* gray-100 */
+    --color-muted-foreground: #6b7280; /* gray-500 */
+    
+    /* Brand Primary */
+    --color-primary: #2563eb; /* blue-600 */
+    --color-primary-foreground: #ffffff; /* white */
+    
+    /* Brand Secondary */
+    --color-secondary: #10b981; /* emerald-500 */
+    --color-secondary-foreground: #ffffff; /* white */
+    
+    /* Semantic Colors */
+    --color-destructive: #dc2626; /* red-600 */
+    --color-destructive-foreground: #ffffff; /* white */
+    --color-accent: #f59e0b; /* amber-500 */
+    --color-accent-foreground: #ffffff; /* white */
+    --color-success: #059669; /* emerald-600 */
+    --color-success-foreground: #ffffff; /* white */
+    --color-warning: #d97706; /* amber-600 */
+    --color-warning-foreground: #ffffff; /* white */
+    --color-error: #dc2626; /* red-600 */
+    --color-error-foreground: #ffffff; /* white */
+    
+    /* Brand Specific Colors */
+    --color-brand-orange: #ff6b35; /* brand-orange */
+    --color-brand-orange-foreground: #ffffff; /* white */
+    --color-brand-blue: #1e40af; /* blue-800 */
+    --color-brand-blue-foreground: #ffffff; /* white */
+    --color-trust-indigo: #6366f1; /* indigo-500 */
+    --color-trust-indigo-foreground: #ffffff; /* white */
+    
+    /* Text Hierarchy */
+    --color-text-primary: #111827; /* gray-900 */
+    --color-text-secondary: #6b7280; /* gray-500 */
+    
+    /* Radius */
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+  
+  body {
+    @apply bg-background text-foreground;
+    font-family: 'Inter', sans-serif;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Inter', sans-serif;
+  }
+  
+  code, pre {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+@layer utilities {
+  /* Contribution Pulse Animation */
+  @keyframes contribution-pulse {
+    0% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.2);
+      opacity: 0.3;
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+  
+  .animate-contribution-pulse {
+    animation: contribution-pulse 2s ease-in-out infinite;
+  }
+  
+  /* Progressive Reveal Animation */
+  @keyframes progressive-reveal {
+    from {
+      transform: translateY(20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  .animate-progressive-reveal {
+    animation: progressive-reveal 0.4s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+  
+  /* Confetti Celebration */
+  @keyframes confetti-fall {
+    from {
+      transform: translateY(0) rotate(0deg);
+      opacity: 1;
+    }
+    to {
+      transform: translateY(-100px) rotate(360deg);
+      opacity: 0;
+    }
+  }
+  
+  .animate-confetti {
+    animation: confetti-fall 1.5s ease-out forwards;
+  }
+  
+  /* Smooth Transitions */
+  .transition-smooth {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+  
+  /* Brand Gradients */
+  .bg-gradient-mentorship {
+    background: linear-gradient(135deg, #ff6b35 0%, #1e40af 100%);
+  }
+  
+  .bg-gradient-contribution {
+    background: linear-gradient(135deg, #10b981 0%, #2563eb 100%);
+  }
+  
+  /* Elevation Shadows */
+  .shadow-brand-soft {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  }
+  
+  .shadow-brand-medium {
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  }
+  
+  .shadow-brand-strong {
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.16);
+  }
+  
+  /* Interactive States */
+  .hover-lift {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .hover-lift:hover {
+    transform: translateY(-2px);
+  }
+  
+  .hover-scale {
+    transition: transform 0.2s ease-out;
+  }
+  
+  .hover-scale:hover {
+    transform: scale(1.05);
+  }
+}
