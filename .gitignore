@@ -21,3 +21,9 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# temporary storage
+**/temp_repo
+**/temp_analysis
+
+.venv
