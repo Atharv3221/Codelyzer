@@ -1,6 +1,6 @@
 # Codelyzer
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/atharv3221/codelyzer/ci.yml?branch=main)](https://github.com/atharv3221/Codelyzer/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/atharv3221/codelyzer/./github/workflows/pylint.yml?branch=main)](https://github.com/atharv3221/Codelyzer/actions)
 [![License](https://img.shields.io/github/license/atharv3221/codelyzer)](LICENSE)
 [![Java Version](https://img.shields.io/badge/Java-17-blue.svg)](https://adoptium.net/)
 [![Docker](https://img.shields.io/docker/pulls/atharv3321/codelyzer)](https://hub.docker.com/r/atharv3321/codelyzer)
