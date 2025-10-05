@@ -92,5 +92,3 @@ run_list_commits(repo_url)
 run_analysis(repo_name)
 run_xml_to_json(repo_name)
 # run_remove_resources(repo_name)
-print(os.__file__.find(
-    "C:/Users/athar/OneDrive/Desktop/Codelyzer2/src/backend/temp_analysis/P2PChatApplication.json"))
