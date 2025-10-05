@@ -25,5 +25,8 @@ yarn-error.log*
 # temporary storage
 **/temp_repo
 **/temp_analysis
+**/temp_commits
 
 .venv
+
+**/_pycache_
