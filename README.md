@@ -1,6 +1,6 @@
 # Codelyzer
 
-[![Build Status](https://img.shields.io/github/actions/workflow/status/atharv3221/codelyzer/./github/workflows/pylint.yml?branch=main)](https://github.com/atharv3221/Codelyzer/actions)
+[![Build Status](https://img.shields.io/github/actions/workflow/status/atharv3221/codelyzer/.github/workflows/pylint.yml?branch=main)](https://github.com/atharv3221/Codelyzer/actions)
 [![License](https://img.shields.io/github/license/atharv3221/codelyzer)](LICENSE)
 [![Java Version](https://img.shields.io/badge/Java-17-blue.svg)](https://adoptium.net/)
 [![Docker](https://img.shields.io/docker/pulls/atharv3321/codelyzer)](https://hub.docker.com/r/atharv3321/codelyzer)
@@ -9,7 +9,7 @@
 
 ## 🎯 Overview
 
-**Codelyzer** automates code quality checks by combining static analysis tools with AI-powered insights to help developers maintain and improve Java projects effortlessly. It analyzes codebases using [Checkstyle](https://checkstyle.org/) and leverages large language models (LLMs) via a flexible Python and shell backend to generate context-aware fixes and submit automatic pull requests, streamlining the entire code review process.
+[**Codelyzer**](https://atharv3221.github.io/Codelyzer/) automates code quality checks by combining static analysis tools with AI-powered insights to help developers maintain and improve Java projects effortlessly. It analyzes codebases using [Checkstyle](https://checkstyle.org/) and leverages large language models (LLMs) via a flexible Python and shell backend to generate context-aware fixes and submit automatic pull requests, streamlining the entire code review process.
 
 Currently, Codelyzer supports Java 17+ projects with Checkstyle, and its extensible architecture will enable future additions of languages, static tools, and deployment platforms.
 
@@ -142,4 +142,4 @@ This project is licensed under the [MIT License](LICENSE). Use, modify, and dist
 
 ---
 
-_Made with ❤️ by the Codelyzer Team_
+_Made with ❤️ by the Clutch Coders_
