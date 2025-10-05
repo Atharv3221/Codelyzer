@@ -29,4 +29,8 @@ yarn-error.log*
 
 .venv
 
-**/_pycache_
+# Ignore Python cache
+**/__pycache__/
+*.pyc
+*.pyo
+*.pyd

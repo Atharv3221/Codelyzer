@@ -1,5 +1,7 @@
 import subprocess
 import os
+import time
+from py_utils import run_xml_to_json, run_list_commits
 
 
 def run_clone(repo_url: str):  # Clones the repo if not cloned
@@ -60,7 +62,33 @@ def run_analysis(repo_name: str):
     return rh.returncode
 
 
+def run_remove_resources(repo_name: str):
+    # Get the directory where this file lives
+    current_dir = os.path.dirname(os.path.abspath(__file__))
+
+    # Build path to the Bash script
+    script_path = os.path.abspath(os.path.join(
+        current_dir, "./../scripts/remove_resources.sh"))
+    script_dir = os.path.dirname(script_path)
+    print(f"Running script at: {script_path}")
+
+    # Run the script in its own directory
+    rh = subprocess.run(
+        ["sh", script_path, repo_name],
+        cwd=script_dir,      # ✅ sets working directory to /scripts
+        check=True,
+        text=True
+    )
+
+    return rh.returncode
+
+
 # Put URLs for now here
 print(run_check("https://github.com/Atharv3221/RailwayReservationSystem"))
 repo = run_clone("https://github.com/Atharv3221/RailwayReservationSystem")
+print(run_list_commits("https://github.com/Atharv3221/RailwayReservationSystem"))
 run_analysis(repo)
+run_xml_to_json(repo)
+
+time.sleep(10)  # Remove later
+print(run_remove_resources(repo))
