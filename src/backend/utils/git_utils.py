@@ -2,6 +2,7 @@ import subprocess
 import os
 import time
 from py_utils import run_xml_to_json, run_list_commits
+from github_utils import run_create_fork
 
 
 def run_clone(repo_url: str):  # Clones the repo if not cloned
@@ -83,12 +84,13 @@ def run_remove_resources(repo_name: str):
     return rh.returncode
 
 
-# Put URLs for now here
-print(run_check("https://github.com/Atharv3221/RailwayReservationSystem"))
-repo = run_clone("https://github.com/Atharv3221/RailwayReservationSystem")
-print(run_list_commits("https://github.com/Atharv3221/RailwayReservationSystem"))
-run_analysis(repo)
-run_xml_to_json(repo)
-
-time.sleep(10)  # Remove later
-print(run_remove_resources(repo))
+repo_url = "https://github.com/Atharv3221/P2PChatApplication.git"
+run_check(repo_url)
+fork_url = run_create_fork(repo_url)
+repo_name = run_clone(fork_url)
+run_list_commits(repo_url)
+run_analysis(repo_name)
+run_xml_to_json(repo_name)
+# run_remove_resources(repo_name)
+print(os.__file__.find(
+    "C:/Users/athar/OneDrive/Desktop/Codelyzer2/src/backend/temp_analysis/P2PChatApplication.json"))
