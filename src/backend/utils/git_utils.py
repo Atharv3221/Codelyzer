@@ -1,6 +1,5 @@
 import subprocess
 import os
-import time
 from py_utils import run_xml_to_json, run_list_commits
 from github_utils import run_create_fork
 
