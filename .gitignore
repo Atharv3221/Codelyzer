@@ -23,11 +23,10 @@ yarn-debug.log*
 yarn-error.log*
 
 # temporary storage
-**/temp_repo
-**/temp_analysis
-**/temp_commits
-
-.venv
+# **/temp_repo
+# **/temp_analysis
+# **/temp_commits
+# **/temp_files
 
 # Ignore Python cache
 **/__pycache__/
