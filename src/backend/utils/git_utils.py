@@ -1,6 +1,5 @@
 import subprocess
 import os
-import time
 from py_utils import run_xml_to_json, run_list_commits
 from github_utils import run_create_fork
 
@@ -91,6 +90,4 @@ repo_name = run_clone(fork_url)
 run_list_commits(repo_url)
 run_analysis(repo_name)
 run_xml_to_json(repo_name)
-# run_remove_resources(repo_name)
-print(os.__file__.find(
-    "C:/Users/athar/OneDrive/Desktop/Codelyzer2/src/backend/temp_analysis/P2PChatApplication.json"))
+run_remove_resources(repo_name)
