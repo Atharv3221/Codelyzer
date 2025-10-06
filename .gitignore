@@ -28,6 +28,8 @@ yarn-error.log*
 # **/temp_commits
 # **/temp_files
 
+.venv
+
 # Ignore Python cache
 **/__pycache__/
 *.pyc
